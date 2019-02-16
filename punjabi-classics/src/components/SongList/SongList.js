@@ -34,8 +34,8 @@ const SongList = ({ classes }) => (
         <ListSubheader component="div">Song List</ListSubheader>
       </GridListTile>
       {songs.map(song => (
-        <GridListTile key={song.img}>
-          <img src={song.img} alt={song.title} />
+        <GridListTile key={song.id}>
+          <img src={song.img} alt="" />
           <GridListTileBar
             title={song.title}
             subtitle={song.singer}
@@ -54,7 +54,7 @@ const SongList = ({ classes }) => (
 );
 
 SongList.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired, // from withStyles()
 };
 
 export default withStyles(styles)(SongList);
