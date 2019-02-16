@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HomePage from './components/HomePage/HomePage';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './routes';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <HomePage />,
+  <BrowserRouter basename="/classics/">
+    <Routes />
+  </BrowserRouter>,
   document.getElementById('root'),
 );
 
