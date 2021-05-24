@@ -1,3 +1,5 @@
+[![Linting and Tests](https://github.com/HarmanSran/punjabi-classics/actions/workflows/test.yml/badge.svg)](https://github.com/HarmanSran/punjabi-classics/actions/workflows/test.yml)
+
 # Overview
 
 Compilation of my favourite songs, poems, and spiritual verses.
