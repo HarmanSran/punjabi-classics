@@ -4,7 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import SearchField from './components/SearchField';
+// import SearchField from './components/SearchField';
 import GithubButton from './components/GithubButton';
 import HomeButton from './components/HomeButton';
 
@@ -42,7 +42,7 @@ const AppToolbar = ({ onClickHome }) => {
             Punjabi Classics
           </Typography>
           <div className={classes.actions}>
-            <SearchField />
+            {/* <SearchField /> */}
             <HomeButton onClickHome={onClickHome} />
             <GithubButton />
           </div>
