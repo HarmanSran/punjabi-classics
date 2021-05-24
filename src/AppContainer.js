@@ -7,9 +7,6 @@ const LYRIC_FILE_PATHS = [
   'data/sambh-leh-dahooda.json',
 ];
 
-/**
- * Ensures `tree.json` is readable and parses it as JSON
- */
 const AppContainer = () => {
   const [lyricsList, setLyricsList] = useState(null);
   const [isFetchError, setIsFetchError] = useState(false);
