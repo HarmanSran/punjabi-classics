@@ -1,23 +1,34 @@
 module.exports = {
-    extends: ['eslint:recommended', 'airbnb'],
-    parser: 'babel-eslint',
-    parserOptions: {
-      ecmaVersion: 6,
-      ecmaFeatures: {
-        jsx: true,
-      },
+  env: {
+    browser: true,
+    es2021: true,
+    jest: true,
+  },
+  extends: [
+    'react-app',
+    'react-app/jest',
+    'plugin:react/recommended',
+    'airbnb',
+  ],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
     },
-    env: {
-      browser: true,
-      es6: true,
-      jest: true,
-    },
-    rules: {
-      'linebreak-style': 'off',
-      'max-len': 'off',
-      'react/forbid-prop-types': 'off',
-      'react/prefer-stateless-function': 'warn',
-      'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
-    },
-  };
-  
+    ecmaVersion: 12,
+    sourceType: 'module',
+  },
+  plugins: [
+    'react',
+  ],
+  rules: {
+    // As of React v17, React import not needed
+    'react/react-in-jsx-scope': 'off',
+
+    // I prefer .js
+    'react/jsx-filename-extension': 'off',
+
+    'linebreak-style': 'off',
+
+    'max-len': 'off',
+  },
+};
