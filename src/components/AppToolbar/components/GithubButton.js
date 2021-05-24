@@ -10,7 +10,6 @@ const GithubButton = () => (
       edge="start"
       color="inherit"
       aria-label="open github"
-      size="small"
       onClick={() => window.open(repository)}
     >
       <GitHubIcon />

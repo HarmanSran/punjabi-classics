@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
   inputRoot: {
     color: 'inherit',
+    height: '48px',
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
