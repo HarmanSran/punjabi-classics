@@ -11,7 +11,7 @@ const LYRIC_FILE_PATHS = [
  * Ensures `tree.json` is readable and parses it as JSON
  */
 const AppContainer = () => {
-  const [allLyrics, setAllLyrics] = useState(null);
+  const [lyricsList, setLyricsList] = useState(null);
   const [isFetchError, setIsFetchError] = useState(false);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const AppContainer = () => {
       try {
         const responses = await Promise.all(LYRIC_FILE_PATHS.map((path) => fetch(path)));
         const data = await Promise.all(responses.map((response) => (response.json())));
-        setAllLyrics(data);
+        setLyricsList(data);
       } catch {
         setIsFetchError(true);
       }
@@ -27,8 +27,8 @@ const AppContainer = () => {
     fetchLyrics();
   }, []);
 
-  if (allLyrics !== null) {
-    return <App allLyrics={allLyrics} />;
+  if (lyricsList !== null) {
+    return <App lyricsList={lyricsList} />;
   }
   if (isFetchError) {
     return 'Oops! Something went wrong.';

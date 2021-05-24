@@ -13,19 +13,19 @@ const theme = createMuiTheme({
   },
 });
 
-const App = ({ allLyrics }) => {
+const App = ({ lyricsList }) => {
   const [activeLyricsId, setActiveLyricsId] = useState(null);
   return (
     <ThemeProvider theme={theme}>
       <AppToolbar onClickHome={() => setActiveLyricsId(null)} />
-      {activeLyricsId === null && <LyricsGrid allLyrics={allLyrics} onClickLyrics={(id) => setActiveLyricsId(id)} />}
-      {activeLyricsId !== null && <LyricsPage lyrics={allLyrics.find(({ id }) => id === activeLyricsId)} />}
+      {activeLyricsId === null && <LyricsGrid lyricsList={lyricsList} onClickLyrics={(id) => setActiveLyricsId(id)} />}
+      {activeLyricsId !== null && <LyricsPage lyrics={lyricsList.find(({ id }) => id === activeLyricsId)} />}
     </ThemeProvider>
   );
 };
 
 App.propTypes = {
-  allLyrics: PropTypes.arrayOf(PropTypes.object).isRequired,
+  lyricsList: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default App;
