@@ -17,7 +17,7 @@ Testing (jest) and linting (eslint) workflow configured out of the box (see `<RO
 # Manual Deployment
 Github Pages deployment has already been configured and works out of the box.
 
-To trigger a production build, and deploy to Github Pages, run:
+To trigger a production build, and deploy to Github Pages, run from root:
 ```
-<ROOT> npm deploy
+npm run deploy
 ```
