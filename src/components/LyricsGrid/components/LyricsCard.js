@@ -45,7 +45,7 @@ const LyricsCard = ({
         </Typography>
       </CardContent>
       <CardActions>
-        <Button onClick={onClickLyrics} size="small">Translation</Button>
+        <Button onClick={onClickLyrics} size="small">Go to lyrics</Button>
       </CardActions>
     </Card>
   );
