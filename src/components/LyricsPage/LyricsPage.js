@@ -1,15 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Typography from '@material-ui/core/Typography';
 
-const LyricsPage = ({ lyrics: { id } }) => (
+const LyricsPage = ({ lyrics: { title } }) => (
   <div>
-    {id}
+    <Typography variant="h5">{title.original}</Typography>
   </div>
 );
 
 LyricsPage.propTypes = {
   lyrics: PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    title: PropTypes.shape({
+      original: PropTypes.string.isRequired,
+      english: PropTypes.string.isRequired,
+    }).isRequired,
   }).isRequired,
 };
 

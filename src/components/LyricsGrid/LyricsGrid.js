@@ -8,11 +8,11 @@ const LyricsGrid = ({ lyricsList, onClickLyrics }) => (
     {lyricsList.map(({
       singer, title, lyricist, id,
     }) => (
-      <Grid item>
+      <Grid item key={id}>
         <LyricsCard
           singer={singer}
-          originalTitle={title['0']}
-          translatedTitle={title['1']}
+          originalTitle={title.original}
+          translatedTitle={title.english}
           lyricist={lyricist}
           onClickLyrics={() => onClickLyrics(id)}
         />
@@ -25,8 +25,10 @@ LyricsGrid.propTypes = {
   lyricsList: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
     singer: PropTypes.string.isRequired,
-    originalTitle: PropTypes.string.isRequired,
-    translatedTitle: PropTypes.string.isRequired,
+    title: PropTypes.shape({
+      original: PropTypes.string.isRequired,
+      english: PropTypes.string.isRequired,
+    }).isRequired,
     lyricist: PropTypes.string,
   })).isRequired,
   onClickLyrics: PropTypes.func.isRequired,
