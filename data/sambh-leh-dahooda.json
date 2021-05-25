@@ -1,11 +1,13 @@
 {
+  "id": "sambh-leh-dahooda",
   "title": {
-    "0": "Sambh Leh Dahooda",
-    "1": "Take Care 'Dahood'"
+    "original": "Sambh Leh Dahooda",
+    "english": "Take care, 'Dahood'."
   },
   "link": "https://www.youtube.com/watch?v=DZUY2OL2wTI",
   "language": "Punjabi",
   "singer": "Kuldeep Manak",
+  "lyricist": "Unknown",
   "translation": "Harman",
   "commentary": [
     "Based on an old Punjabi folk tale - of a supposed far away King of Baghdad, King Dahood.",

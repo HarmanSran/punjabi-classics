@@ -1,11 +1,13 @@
 {
+  "id": "ja-mur-ja",
   "title": {
-    "0": "Ja Mur Ja Aje Vi Ghar Mur Ja",
-    "1": "Turn away! Still you can turn away to your home!"
+    "original": "Ja Mur Ja Aje Vi Ghar Mur Ja",
+    "english": "Turn away! You can still turn back to your home!"
   },
   "link": "https://www.youtube.com/watch?v=nryoXYUUHgM",
   "language": "Punjabi",
   "singer": "Nusrat Fateh Ali Khan",
+  "lyricist": "Bari",
   "translation": "Harman",
   "commentary": [
     "A warning to the wayfarer: Stay away from love!"
