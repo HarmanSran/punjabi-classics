@@ -13,6 +13,7 @@ const LyricsPage = ({
     translation,
     commentary,
     lyrics,
+    footnotes,
   },
 }) => (
   <div>
@@ -42,6 +43,16 @@ const LyricsPage = ({
         <br />
       </Fragment>
     ))}
+    {footnotes && (
+      <>
+        <hr />
+        <Typography variant="subtitle1">Footnotes</Typography>
+        {footnotes.map((footnote, i) => (
+          <Typography variant="subtitle2" gutterBottom key={i.toString()}>{footnote}</Typography>
+        ))}
+        <br />
+      </>
+    )}
   </div>
 );
 
@@ -58,6 +69,7 @@ LyricsPage.propTypes = {
     translation: PropTypes.string.isRequired,
     commentary: PropTypes.arrayOf(PropTypes.string).isRequired,
     lyrics: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
+    footnotes: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
 };
 
