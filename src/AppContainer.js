@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import App from './App';
 
-const LYRIC_FILE_PATHS = [
-  'data/ja-mur-ja.json',
-  'data/pyala-rakh-de.json',
-  'data/sambh-leh-dahooda.json',
+const LYRIC_FILE_NAMES = [
+  'ja-mur-ja',
+  'pyala-rakh-de',
+  'sambh-leh-dahooda',
+  'aisi-lagi-lagan',
 ];
 
 const AppContainer = () => {
@@ -14,7 +15,7 @@ const AppContainer = () => {
   useEffect(() => {
     const fetchLyrics = async () => {
       try {
-        const responses = await Promise.all(LYRIC_FILE_PATHS.map((path) => fetch(path)));
+        const responses = await Promise.all(LYRIC_FILE_NAMES.map((name) => fetch(`data/${name}.json`)));
         const data = await Promise.all(responses.map((response) => (response.json())));
         setLyricsList(data);
       } catch {
