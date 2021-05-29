@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 // import SearchField from './components/SearchField';
 import GithubButton from './components/GithubButton';
-import HomeButton from './components/HomeButton';
+import BackButton from './components/BackButton';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,19 +31,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const AppToolbar = ({ onClickHome }) => {
+const AppToolbar = ({ isNavBackVisible, onClickNavBack }) => {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <AppBar position="fixed" color="primary">
         <Toolbar>
+          {isNavBackVisible && <BackButton onClickNavBack={onClickNavBack} />}
           <Typography className={classes.title} variant="h6" noWrap>
             Punjabi Classics
           </Typography>
           <div className={classes.actions}>
             {/* <SearchField /> */}
-            <HomeButton onClickHome={onClickHome} />
             <GithubButton />
           </div>
         </Toolbar>
@@ -55,7 +55,8 @@ const AppToolbar = ({ onClickHome }) => {
 };
 
 AppToolbar.propTypes = {
-  onClickHome: PropTypes.func.isRequired,
+  isNavBackVisible: PropTypes.bool.isRequired,
+  onClickNavBack: PropTypes.func.isRequired,
 };
 
 export default AppToolbar;

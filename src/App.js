@@ -24,7 +24,7 @@ const App = ({ lyricsList }) => {
   const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>
-      <AppToolbar onClickHome={() => setActiveLyricsId(null)} />
+      <AppToolbar isNavBackVisible={activeLyricsId !== null} onClickNavBack={() => setActiveLyricsId(null)} />
       <div className={classes.contentContainer}>
         {activeLyricsId === null && <LyricsGrid lyricsList={lyricsList} onClickLyrics={(id) => setActiveLyricsId(id)} />}
         {activeLyricsId !== null && <LyricsPage lyrics={lyricsList.find(({ id }) => id === activeLyricsId)} />}
