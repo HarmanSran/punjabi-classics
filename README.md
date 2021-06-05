@@ -1,9 +1,7 @@
 [![Linting and Tests](https://github.com/HarmanSran/punjabi-classics/actions/workflows/test.yml/badge.svg)](https://github.com/HarmanSran/punjabi-classics/actions/workflows/test.yml)
 
 # Overview
-
-Compilation of my translations of my favourite Punjabi songs, poems, and spiritual verses.
-
+Compilation of translations of various Punjabi songs, poems, and spiritual verses.
 
 # Demo
 Live demo: https://harmansran.github.io/punjabi-classics/
