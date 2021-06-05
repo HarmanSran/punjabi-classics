@@ -6,6 +6,7 @@ const LYRIC_FILE_NAMES = [
   'pyala-rakh-de',
   'sambh-leh-dahooda',
   'aisi-lagi-lagan',
+  'tere-tille-ton',
 ];
 
 const AppContainer = () => {
