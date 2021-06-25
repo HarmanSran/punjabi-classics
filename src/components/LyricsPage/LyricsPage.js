@@ -28,7 +28,7 @@ const LyricsPage = ({
     <Typography variant="subtitle2">{`Original language - ${language}`}</Typography>
     <Typography variant="subtitle2">{`English translator - ${translation}`}</Typography>
     <hr />
-    <Typography variant="subtitle1">Translator&apos;s commentary</Typography>
+    <Typography variant="subtitle1">Harman&apos;s commentary</Typography>
     {commentary.map((comment, i) => (
       <Typography variant="body2" gutterBottom key={i.toString()}>
         {comment}
