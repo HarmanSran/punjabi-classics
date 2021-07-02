@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import ReactPlayer from 'react-player';
 
+const LineBreak = () => <hr style={{ maxWidth: '500px' }} />;
+
 const LyricsPage = ({
   lyrics: {
     title,
@@ -16,25 +18,25 @@ const LyricsPage = ({
     footnotes,
   },
 }) => (
-  <div>
+  <div style={{ textAlign: 'center' }}>
     <Typography variant="h5">{title.original}</Typography>
     <Typography variant="subtitle1">{`"${title.english}"`}</Typography>
     <br />
-    <ReactPlayer url={link} />
+    <ReactPlayer url={link} style={{ margin: '0 auto' }} />
     <br />
-    <hr />
+    <LineBreak />
     <Typography variant="subtitle2">{`Singer - ${singer}`}</Typography>
     <Typography variant="subtitle2">{`Lyricist - ${lyricist}`}</Typography>
     <Typography variant="subtitle2">{`Original language - ${language}`}</Typography>
     <Typography variant="subtitle2">{`English translator - ${translation}`}</Typography>
-    <hr />
+    <LineBreak />
     <Typography variant="subtitle1">Harman&apos;s commentary</Typography>
     {commentary.map((comment, i) => (
       <Typography variant="body2" gutterBottom key={i.toString()}>
         {comment}
       </Typography>
     ))}
-    <hr />
+    <LineBreak />
     <Typography variant="subtitle1">Lyrics</Typography>
     {lyrics.map((lyric, i) => (
       <Fragment key={i.toString()}>
@@ -45,7 +47,7 @@ const LyricsPage = ({
     ))}
     {footnotes && (
       <>
-        <hr />
+        <LineBreak />
         <Typography variant="subtitle1">Footnotes</Typography>
         {footnotes.map((footnote, i) => (
           <Typography variant="subtitle2" gutterBottom key={i.toString()}>{footnote}</Typography>

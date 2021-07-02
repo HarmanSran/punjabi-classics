@@ -4,7 +4,11 @@ import Grid from '@material-ui/core/Grid';
 import LyricsCard from './components/LyricsCard';
 
 const LyricsGrid = ({ lyricsList, onClickLyrics }) => (
-  <Grid container spacing={3}>
+  <Grid
+    container
+    spacing={3}
+    justify="center"
+  >
     {lyricsList.map(({
       singer, title, lyricist, id,
     }) => (
