@@ -1,9 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   wrapper: {
@@ -11,7 +11,7 @@ const useStyles = makeStyles({
   },
 });
 
-const BackButton = ({ onClickNavBack }) => {
+const BackButton = () => {
   const classes = useStyles();
   return (
     <div className={classes.wrapper}>
@@ -20,17 +20,14 @@ const BackButton = ({ onClickNavBack }) => {
           edge="start"
           color="inherit"
           aria-label="back"
-          onClick={onClickNavBack}
+          component={Link}
+          to="/"
         >
           <ArrowBackIcon />
         </IconButton>
       </Tooltip>
     </div>
   );
-};
-
-BackButton.propTypes = {
-  onClickNavBack: PropTypes.func.isRequired,
 };
 
 export default BackButton;

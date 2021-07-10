@@ -28,9 +28,9 @@ const App = ({ lyricsList }) => {
   const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>
-      <AppToolbar />
-      <div className={classes.contentContainer}>
-        <Router>
+      <Router>
+        <AppToolbar />
+        <div className={classes.contentContainer}>
           <Switch>
             <Route path="/lyrics/:id">
               <LyricsPage lyricsList={lyricsList} />
@@ -39,8 +39,8 @@ const App = ({ lyricsList }) => {
               <LyricsGrid lyricsList={lyricsList} />
             </Route>
           </Switch>
-        </Router>
-      </div>
+        </div>
+      </Router>
     </ThemeProvider>
   );
 };
