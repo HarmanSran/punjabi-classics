@@ -8,6 +8,7 @@ const LYRIC_FILE_NAMES = [
   'aisi-lagi-lagan',
   'tere-tille-ton',
   'ajab-andaz',
+  'punjab-di-malika',
 ];
 
 const AppContainer = () => {
