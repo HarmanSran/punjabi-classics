@@ -6,6 +6,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   card: {
@@ -24,7 +25,7 @@ const useStyles = makeStyles({
 });
 
 const LyricsCard = ({
-  singer, originalTitle, translatedTitle, lyricist, onClickLyrics,
+  id, singer, originalTitle, translatedTitle, lyricist,
 }) => {
   const classes = useStyles();
 
@@ -45,17 +46,17 @@ const LyricsCard = ({
         </Typography>
       </CardContent>
       <CardActions>
-        <Button onClick={onClickLyrics} size="small">Go to lyrics</Button>
+        <Button component={Link} to={`/lyrics/${id}`} size="small">Go to lyrics</Button>
       </CardActions>
     </Card>
   );
 };
 
 LyricsCard.propTypes = {
+  id: PropTypes.string.isRequired,
   singer: PropTypes.string.isRequired,
   originalTitle: PropTypes.string.isRequired,
   translatedTitle: PropTypes.string.isRequired,
-  onClickLyrics: PropTypes.func.isRequired,
   lyricist: PropTypes.string,
 };
 

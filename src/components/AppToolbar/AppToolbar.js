@@ -1,12 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 // import SearchField from './components/SearchField';
 import GithubButton from './components/GithubButton';
-import BackButton from './components/BackButton';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,14 +22,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const AppToolbar = ({ isNavBackVisible, onClickNavBack }) => {
+const AppToolbar = () => {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <AppBar position="fixed" color="primary">
         <Toolbar>
-          {isNavBackVisible && <BackButton onClickNavBack={onClickNavBack} />}
+          {/* {isNavBackVisible && <BackButton onClickNavBack={onClickNavBack} />} */}
           <Typography className={classes.title} variant="h6" noWrap>
             Punjabi Classics
           </Typography>
@@ -45,11 +43,6 @@ const AppToolbar = ({ isNavBackVisible, onClickNavBack }) => {
       <Toolbar />
     </div>
   );
-};
-
-AppToolbar.propTypes = {
-  isNavBackVisible: PropTypes.bool.isRequired,
-  onClickNavBack: PropTypes.func.isRequired,
 };
 
 export default AppToolbar;

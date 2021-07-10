@@ -1,6 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import {
+  HashRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
 import AppToolbar from './components/AppToolbar/AppToolbar';
 import LyricsGrid from './components/LyricsGrid/LyricsGrid';
 import LyricsPage from './components/LyricsPage/LyricsPage';
@@ -20,14 +25,21 @@ const useStyles = makeStyles({
 });
 
 const App = ({ lyricsList }) => {
-  const [activeLyricsId, setActiveLyricsId] = useState(null);
   const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>
-      <AppToolbar isNavBackVisible={activeLyricsId !== null} onClickNavBack={() => setActiveLyricsId(null)} />
+      <AppToolbar />
       <div className={classes.contentContainer}>
-        {activeLyricsId === null && <LyricsGrid lyricsList={lyricsList} onClickLyrics={(id) => setActiveLyricsId(id)} />}
-        {activeLyricsId !== null && <LyricsPage lyrics={lyricsList.find(({ id }) => id === activeLyricsId)} />}
+        <Router>
+          <Switch>
+            <Route path="/lyrics/:id">
+              <LyricsPage lyricsList={lyricsList} />
+            </Route>
+            <Route path="/">
+              <LyricsGrid lyricsList={lyricsList} />
+            </Route>
+          </Switch>
+        </Router>
       </div>
     </ThemeProvider>
   );

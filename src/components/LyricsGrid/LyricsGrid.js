@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import LyricsCard from './components/LyricsCard';
 
-const LyricsGrid = ({ lyricsList, onClickLyrics }) => (
+const LyricsGrid = ({ lyricsList }) => (
   <Grid
     container
     spacing={3}
@@ -14,11 +14,11 @@ const LyricsGrid = ({ lyricsList, onClickLyrics }) => (
     }) => (
       <Grid item key={id}>
         <LyricsCard
+          id={id}
           singer={singer}
           originalTitle={title.original}
           translatedTitle={title.english}
           lyricist={lyricist}
-          onClickLyrics={() => onClickLyrics(id)}
         />
       </Grid>
     ))}
@@ -35,7 +35,6 @@ LyricsGrid.propTypes = {
     }).isRequired,
     lyricist: PropTypes.string,
   })).isRequired,
-  onClickLyrics: PropTypes.func.isRequired,
 };
 
 export default LyricsGrid;
