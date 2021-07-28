@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import App from './App';
 
 const LYRIC_FILE_NAMES = [
+  'kamli',
   'ja-mur-ja',
   'pyala-rakh-de',
   'sambh-leh-dahooda',
