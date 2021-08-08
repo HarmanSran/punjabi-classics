@@ -11,6 +11,7 @@ const LYRIC_FILE_NAMES = [
   'ajab-andaz',
   'punjab-di-malika',
   'kiven-mukhre-ton',
+  'sun-charkhe-di',
 ];
 
 const AppContainer = () => {
