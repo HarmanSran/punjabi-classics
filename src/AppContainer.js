@@ -2,16 +2,17 @@ import { useEffect, useState } from 'react';
 import App from './App';
 
 const LYRIC_FILE_NAMES = [
-  'kamli',
+  'aisi-lagi-lagan',
+  'ajab-andaz',
   'ja-mur-ja',
+  'kamli',
+  'kiven-mukhre-ton',
+  'punjab-di-malika',
   'pyala-rakh-de',
   'sambh-leh-dahooda',
-  'aisi-lagi-lagan',
-  'tere-tille-ton',
-  'ajab-andaz',
-  'punjab-di-malika',
-  'kiven-mukhre-ton',
+  'sar-jhukaya-ton',
   'sun-charkhe-di',
+  'tere-tille-ton',
 ];
 
 const AppContainer = () => {
