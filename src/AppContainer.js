@@ -7,6 +7,7 @@ const LYRIC_FILE_NAMES = [
   'ja-mur-ja',
   'kamli',
   'kiven-mukhre-ton',
+  'kithe-ishq-da-rog',
   'punjab-di-malika',
   'pyala-rakh-de',
   'sambh-leh-dahooda',
